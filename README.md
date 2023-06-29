@@ -1,6 +1,5 @@
 # The Feed Store Challenge - iOSLeadEssentials.com
 
-![](https://github.com/essentialdevelopercom/ios-lead-essentials-feed-store-challenge/workflows/CI/badge.svg)
 
 You are called to build a new infrastructure component that conforms to the `<FeedStore>` protocol using **Core Data** to persist the feed.
 

@@ -110,7 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				08CB21E1261638BA00751C29 /* Helpers */,
-				08CE2BA72285BCC600183A1B /* LocalFeedImage.swift */,
+				3CE7F6302A4DF11F00A8A593 /* Model */,
 				08CE2BA52285BCB600183A1B /* FeedStore.swift */,
 				08F35C6E261612AE00AFE277 /* CoreDataFeedStore.swift */,
 				08CE2B8F2285BBD100183A1B /* Info.plist */,
@@ -151,6 +151,14 @@
 				0859E85A27299E6F00E1E9CE /* NSEntityDescription+Assertions.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3CE7F6302A4DF11F00A8A593 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				08CE2BA72285BCC600183A1B /* LocalFeedImage.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
