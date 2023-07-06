@@ -21,4 +21,11 @@ extension ManagedFeedImage {
 			return managed
 		})
 	}
+
+	var local: LocalFeedImage {
+		return LocalFeedImage(id: id,
+		                      description: imageDescription,
+		                      location: location,
+		                      url: url)
+	}
 }

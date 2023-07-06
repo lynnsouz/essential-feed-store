@@ -33,60 +33,60 @@ class FeedStoreChallengeTests: XCTestCase, FailableFeedStoreSpecs {
 	}
 
 	func test_retrieve_deliversFoundValuesOnNonEmptyCache() throws {
-//		let sut = try makeSUT()
-//
-//		assertThatRetrieveDeliversFoundValuesOnNonEmptyCache(on: sut)
+		let sut = try makeSUT()
+
+		assertThatRetrieveDeliversFoundValuesOnNonEmptyCache(on: sut)
 	}
 
 	func test_retrieve_hasNoSideEffectsOnNonEmptyCache() throws {
-//		let sut = try makeSUT()
-//
-//		assertThatRetrieveHasNoSideEffectsOnNonEmptyCache(on: sut)
+		let sut = try makeSUT()
+
+		assertThatRetrieveHasNoSideEffectsOnNonEmptyCache(on: sut)
 	}
 
 	func test_retrieve_deliversFailureOnRetrievalError() throws {
-//		let stub = NSManagedObjectContext.alwaysFailingFetchStub()
-//		stub.startIntercepting()
-//
-//		let sut = try makeSUT()
-//
-//		assertThatRetrieveDeliversFailureOnRetrievalError(on: sut)
+		let stub = NSManagedObjectContext.alwaysFailingFetchStub()
+		stub.startIntercepting()
+
+		let sut = try makeSUT()
+
+		assertThatRetrieveDeliversFailureOnRetrievalError(on: sut)
 	}
 
 	func test_retrieve_hasNoSideEffectsOnFailure() throws {
-//		let stub = NSManagedObjectContext.alwaysFailingFetchStub()
-//		stub.startIntercepting()
-//
-//		let sut = try makeSUT()
-//
-//		assertThatRetrieveHasNoSideEffectsOnFailure(on: sut)
+		let stub = NSManagedObjectContext.alwaysFailingFetchStub()
+		stub.startIntercepting()
+
+		let sut = try makeSUT()
+
+		assertThatRetrieveHasNoSideEffectsOnFailure(on: sut)
 	}
 
 	func test_insert_deliversNoErrorOnEmptyCache() throws {
-//		let sut = try makeSUT()
-//
-//		assertThatInsertDeliversNoErrorOnEmptyCache(on: sut)
+		let sut = try makeSUT()
+
+		assertThatInsertDeliversNoErrorOnEmptyCache(on: sut)
 	}
 
 	func test_insert_deliversNoErrorOnNonEmptyCache() throws {
-//		let sut = try makeSUT()
-//
-//		assertThatInsertDeliversNoErrorOnNonEmptyCache(on: sut)
+		let sut = try makeSUT()
+
+		assertThatInsertDeliversNoErrorOnNonEmptyCache(on: sut)
 	}
 
 	func test_insert_overridesPreviouslyInsertedCacheValues() throws {
-//		let sut = try makeSUT()
-//
-//		assertThatInsertOverridesPreviouslyInsertedCacheValues(on: sut)
+		let sut = try makeSUT()
+
+		assertThatInsertOverridesPreviouslyInsertedCacheValues(on: sut)
 	}
 
 	func test_insert_deliversErrorOnInsertionError() throws {
-//		let stub = NSManagedObjectContext.alwaysFailingSaveStub()
-//		stub.startIntercepting()
-//
-//		let sut = try makeSUT()
-//
-//		assertThatInsertDeliversErrorOnInsertionError(on: sut)
+		let stub = NSManagedObjectContext.alwaysFailingSaveStub()
+		stub.startIntercepting()
+
+		let sut = try makeSUT()
+
+		assertThatInsertDeliversErrorOnInsertionError(on: sut)
 	}
 
 	func test_insert_hasNoSideEffectsOnInsertionError() throws {
