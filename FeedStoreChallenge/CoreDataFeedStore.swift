@@ -41,16 +41,18 @@ public final class CoreDataFeedStore: FeedStore {
 	}
 
 	public func retrieve(completion: @escaping RetrievalCompletion) {
+		guard let entityName = ManagedCache.entity().name
+		else { return completion(.empty) }
+
 		perform { context in
 			do {
-				let request = NSFetchRequest<ManagedCache>(entityName: ManagedCache.entity().name!)
+				let request = NSFetchRequest<ManagedCache>(entityName: entityName)
 				request.returnsObjectsAsFaults = false
-				if let cache = try ManagedCache.find(in: context) {
-					completion(.found(feed: cache.localFeed,
-					                  timestamp: cache.timestamp))
-				} else {
-					completion(.empty)
+				guard let cache = try ManagedCache.find(in: context) else {
+					return completion(.empty)
 				}
+				completion(.found(feed: cache.localFeed,
+				                  timestamp: cache.timestamp))
 			} catch {
 				completion(.failure(error))
 			}
