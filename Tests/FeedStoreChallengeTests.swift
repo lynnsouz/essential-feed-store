@@ -197,7 +197,7 @@ class FeedStoreChallengeTests: XCTestCase, FailableFeedStoreSpecs {
 
 		entity.verify(attribute: "id",
 		              hasType: .UUIDAttributeType,
-		              isOptional: true)
+		              isOptional: false)
 		entity.verify(attribute: "imageDescription",
 		              hasType: .stringAttributeType,
 		              isOptional: true)
