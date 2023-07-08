@@ -20,16 +20,6 @@ class FeedStoreChallengeTests: XCTestCase, FailableFeedStoreSpecs {
 	//
 	//  ***********************
 
-	override func setUp() {
-		super.setUp()
-		deleteCacheStorage()
-	}
-
-	override func tearDown() {
-		super.tearDown()
-		deleteCacheStorage()
-	}
-
 	func test_retrieve_deliversEmptyOnEmptyCache() throws {
 		let sut = try makeSUT()
 
@@ -220,10 +210,6 @@ class FeedStoreChallengeTests: XCTestCase, FailableFeedStoreSpecs {
 	private func inMemoryStoreURL() -> URL {
 		URL(fileURLWithPath: "/dev/null")
 			.appendingPathComponent("\(type(of: self)).store")
-	}
-
-	private func deleteCacheStorage() {
-		try? FileManager.default.removeItem(at: inMemoryStoreURL())
 	}
 }
 
